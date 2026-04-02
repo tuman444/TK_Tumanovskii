@@ -36,7 +36,7 @@ namespace UnitTestProject1
         // Все положительные
         [DataRow(1.0, 2.0, 3.0, 3.0, DisplayName = "Max_Positive_LastIsMax")]
         [DataRow(10.5, 2.1, 5.5, 10.5, DisplayName = "Max_Positive_FirstIsMax")]
-        [DataRow(1.1, 9.9, 3.3, 9.9, DisplayName = "Max_Positive_MiddleIsMax")] 
+        [DataRow(1.1, 9.9, 3.3, 9.9, DisplayName = "Max_Positive_MiddleIsMax")]
         // Отрицательные
         [DataRow(-5.0, -2.0, -10.0, -2.0, DisplayName = "Max_AllNegative")]
         // Смешанные
@@ -51,7 +51,7 @@ namespace UnitTestProject1
         [DataRow(double.MaxValue, 0, double.MinValue, double.MaxValue, DisplayName = "Max_ExtremeValues")]
         public void GetMax_TestCases(double a, double b, double c, double expected)
         {
-            double actual = Calculator.GetMin(a, b, c);
+            double actual = Calculator.GetMax(a, b, c);
             Assert.AreEqual(expected, actual, "Расчет максимума неверен.");
         }
     }
